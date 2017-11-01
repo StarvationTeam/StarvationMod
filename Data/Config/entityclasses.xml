@@ -760,9 +760,8 @@
 		<property name="AITask-2" value="BreakBlock" />
 		<property name="AITask-3" value="RangedAttackTarget" param1="1" param2="5" />
 		<property name="AITask-4" value="ApproachAndAttackTarget" param1="EntityPlayer" />
-		<property name="AITask-5" value="ApproachAndAttackTarget" param1="EntityAnimalStag" />
-		<property name="AITask-6" value="ApproachSpot" />
-		<property name="AITask-7" value="Wander" />
+		<property name="AITask-5" value="ApproachSpot" />
+		<property name="AITask-6" value="Wander" />
 		<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam" />
 		<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert" />
 		<property name="SoundAttack" value="Enemies/Acid_Puking_Hulk/hulkattack" />
@@ -1038,7 +1037,6 @@
 		<property name="Mesh" value="Animals/Stag/STAG" />
 		<property name="ModelType" value="Standard" />
 		<property name="Prefab" value="NPC" />
-		<property name="Class" value="EntityAnimalStag" />
 		<property name="Parent" value="Animals" />
 		<property name="AvatarController" value="GameObjectAnimalAnimation" />
 		<property name="Weight" value="70" />
@@ -1719,63 +1717,6 @@
 	<entity_class name="npcTraderHugh" extends="npcTraderTemplate">
 		<property name="Archetype" value="TraderHugh" />
 		<property name="NPCID" value="traderric" />
-	</entity_class>
-	<entity_class name="animalSnakeSwim" extends="animalTemplateHostile">
-		<property name="Class" value="EntitySwimmer" />
-		<property name="EntityType" value="Zombie" />
-		<property name="Mesh" value="Animals/Snake/snakeRagdoll" />
-		<property name="AvatarController" value="AvatarAnimalController" />
-		<property name="HasRagdoll" value="false" />
-		<property name="RagdollOnDeathChance" value="0" />
-		<property name="Class" value="EntityZombie" />
-		<property name="Parent" value="Enemies" />
-		<property name="PhysicsBody" value="snake" />
-		<property name="Faction" value="undead" />
-		<property name="AITask-1" value="BreakDoor" />
-		<property name="AITask-2" value="BreakBlock" />
-		<property name="AITask-3" value="Territorial" />
-		<property name="AITask-4" value="ApproachAndAttackTarget" param1="EntityPlayer" param2="15" />
-		<property name="AITask-5" value="ApproachAndAttackTarget" param1="EntityNPC" param2="15" />
-		<property name="AITask-6" value="ApproachSpot" />
-		<property name="AITask-7" value="Wander" />
-		<property name="AITarget-1" value="SetAsTargetIfHurt" param1="EntityNPC" />
-		<property name="AITarget-2" value="SetAsTargetIfHurt" param1="EntityPlayer" />
-		<property name="AITarget-3" value="BlockingTargetTask" />
-		<property name="AITarget-4" value="SetNearestCorpseAsTarget" param1="EntityPlayer" />
-		<property name="AITarget-5" value="SetNearestEntityAsTarget" param1="EntityNPC" />
-		<property name="AITarget-6" value="SetNearestEntityAsTarget" param1="EntityPlayer" />
-		<property name="MaxHealth" value="60" />
-		<property name="HandItem" value="handZombie" />
-		<property name="Weight" value="70" />
-		<property name="WanderSpeed" value="0.08" />
-		<property name="PanicSpeed" value="0.2" />
-		<property name="ApproachSpeed" value="0.2" />
-		<property name="NightWanderSpeed" value="0.08" />
-		<property name="NightApproachSpeed" value="0.2" />
-		<property name="WalkType" value="7" />
-		<property name="SoundHurt" value="Animals/Snake/snakepain" />
-		<property name="SoundDeath" value="Animals/Snake/snakedeath" />
-		<property name="SoundRandom" value="Animals/Snake/snakeroam" />
-		<property name="SoundSense" value="Animals/Snake/snakesense" />
-		<property name="SoundAlert" value="Animals/Snake/snakealert" />
-		<property name="SoundAttack" value="Animals/Snake/snakeattack" />
-		<property name="AttackTimeoutDay" value="1.5" />
-		<property name="AttackTimeoutNight" value="1.1" />
-		<property name="ExperienceGain" value="384" />
-		<property name="RootMotion" value="false" />
-		<property name="HasDeathAnim" value="true" />
-		<property class="MechanimAttackTriggers">
-			<property name="state0" value="AttackTrigger" />
-		</property>
-		<property class="MechanimAttackStates">
-			<property name="state0" value="attack" />
-		</property>
-		<property class="MechanimDeathTriggers">
-			<property name="state0" value="DeathTrigger" />
-		</property>
-		<property name="DeadBodyHitPoints" value="150" />
-		<drop event="Harvest" name="rawMeat" tool_category="Butcher" count="2" />
-		<drop event="Harvest" name="animalHide" tool_category="Butcher" count="2" />
 	</entity_class>
 	<entity_class name="rhino">
 		<!-- Mesh and class properties -->
